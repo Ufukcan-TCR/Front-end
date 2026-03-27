@@ -1,10 +1,11 @@
 .sect1 {
     padding: 100px;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 kolommen */
+    gap: 40px;
     margin: 10px;
+    align-items: center;
 }
-
 body {
     background-color: lightgray;
 }
@@ -106,6 +107,11 @@ footer{
 
 /* Mobile view */
 @media (max-width: 767px) {
+    .sect1 {
+        grid-template-columns: 1fr; /* 1 kolom */
+        padding: 40px;
+    }
+
     label {
         display: block;
         color: white;
@@ -150,11 +156,4 @@ footer{
     b {
         font-size: 10px;
     }
-}
-
-.sect1 {
-    padding: 100px;
-    display: flex;
-    justify-content: space-between;
-    margin: 10px;
 }
