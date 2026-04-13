@@ -31,24 +31,6 @@ main {
     margin-bottom: 40px;
 }
 
-section:first-of-type {
-    background-color: #969696;
-    @extend .sect1;
-}
-
-section {
-    background-color: #767676;
-    @extend .sect1;
-}
-.left {
-    display: flex;
-    flex-direction: column;
-}
-
-li {
-    border-bottom: 1px solid #444;
-}
-
 p:first-of-type {
     margin: 20px;
     font-weight: bolder;
@@ -74,19 +56,37 @@ a:hover {
     background: #444;
 }
 
+section:first-of-type {
+    background-color: #969696;
+    @extend .sect1;
+}
+
+section {
+    background-color: #767676;
+    @extend .sect1;
+}
+.left {
+    display: flex;
+    flex-direction: column;
+}
+
+li {
+    border-bottom: 1px solid #444;
+}
+
 /* Hamburger icon */
 label {
-    display: none;
-    padding: 15px;
-    cursor: pointer;
+  display: none;
+  padding: 15px;
+  cursor: pointer;
 }
 
-input[type="checkbox"] {
-    display: none;
+input[type=checkbox] {
+  display: none;
 }
 
-footer{
-  background-color:rgb(47, 47, 47);
+footer {
+  background-color: rgb(47, 47, 47);
   margin-top: auto;
   display: grid;
   place-items: center;
@@ -96,64 +96,54 @@ footer{
 
 /* Desktop view */
 @media (min-width: 768px) {
-    ul {
-        display: flex;
-    }
-    
-    li {
-        border: none;
-    }
+  ul {
+    display: flex;
+  }
+  li {
+    border: none;
+  }
 }
-
 /* Mobile view */
 @media (max-width: 767px) {
-    .sect1 {
-        grid-template-columns: 1fr; /* 1 kolom */
-        padding: 40px;
-    }
-
-    label {
-        display: block;
-        color: white;
-    }
-
-    ul {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-in-out;
-    }
-
-    input:checked ~ ul {
-        max-height: 500px; /* Hoog genoeg voor alle items */
-    }
-
-    /* Hamburger lijnen */
-    label::before {
-        content: "☰";
-        font-size: 24px;
-    }
-
-    input:checked + label::before {
-        content: "✕";
-    }
-
-    main {
-        font-size: 38px;
-    }
-
-    img {
-        height: 120px;
-    }
-
-    p:first-of-type {
-        font-size: 26px;
-    }
-
-    p {
-        font-size: 8px;
-    }
-
-    b {
-        font-size: 10px;
-    }
+  label {
+    display: block;
+    color: white;
+  }
+  ul {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+  }
+  input:checked ~ ul {
+    max-height: 500px; /* Hoog genoeg voor alle items */
+  }
+  /* Hamburger lijnen */
+  label::before {
+    content: "☰";
+    font-size: 24px;
+  }
+  input:checked + label::before {
+    content: "✕";
+  }
+  main {
+    font-size: 30px;
+  }
+  img {
+    height: 120px;
+  }
+  p:first-of-type {
+    font-size: 24px;
+  }
+  p {
+    font-size: 8px;
+  }
+  b {
+    font-size: 10px;
+  }
+}
+.sect1, section:first-of-type, section {
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
 }

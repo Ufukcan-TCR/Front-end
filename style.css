@@ -1,9 +1,11 @@
 @charset "UTF-8";
 .sect1, section, section:first-of-type {
   padding: 100px;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 kolommen */
+  gap: 40px;
   margin: 10px;
+  align-items: center;
 }
 
 body {
@@ -31,23 +33,6 @@ main {
   margin-bottom: 40px;
 }
 
-section:first-of-type {
-  background-color: #969696;
-}
-
-section {
-  background-color: #767676;
-}
-
-.left {
-  display: flex;
-  flex-direction: column;
-}
-
-li {
-  border-bottom: 1px solid #444;
-}
-
 p:first-of-type {
   margin: 20px;
   font-weight: bolder;
@@ -71,6 +56,23 @@ a {
 
 a:hover {
   background: #444;
+}
+
+section:first-of-type {
+  background-color: #969696;
+}
+
+section {
+  background-color: #767676;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+}
+
+li {
+  border-bottom: 1px solid #444;
 }
 
 /* Hamburger icon */
@@ -125,13 +127,13 @@ footer {
     content: "✕";
   }
   main {
-    font-size: 38px;
+    font-size: 30px;
   }
   img {
     height: 120px;
   }
   p:first-of-type {
-    font-size: 26px;
+    font-size: 24px;
   }
   p {
     font-size: 8px;
